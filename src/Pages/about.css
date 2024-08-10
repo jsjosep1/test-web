@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container-title-about {
+    width: 100vw;
+    height: 50vh;
+    background-image: url('./about.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title-about {
+    font-size: 55px;
+    background: linear-gradient(90deg, rgb(185, 146, 131), rgb(255, 255, 255));
+    text-align: center;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .aboutus {
+    background-color: #303c6a;
+    width: 100vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    color: #fdedb1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+  }
+  
+  .aboutus ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 8vw;
+  }
+  
+  .aboutus li {
+    flex: 1;
+  }
+  
+  .aboutus h1 {
+    margin: 0;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    font-size: 2rem; 
+  }
+  
+  .aboutus p {
+    margin: 0;
+    padding-top: 1rem;
+    font-size: 1rem; 
+  }
+  
+  .aboutus img {
+    width: 15vw; 
+    height: auto;
+    display: block;
+    margin-left: auto;
+  }
+
+
+  .missionvision {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    color: black;
+    background-color: beige;
+    
+  
+  }
+
+  .missionvision h1 {
+    text-align: center;
+    padding-bottom: 3vh;
+    font-size: 2rem;
+  }
+
+  .missionvision h2 {
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .missionvision p {
+    text-align: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 2vh;
+    font-size: 1rem;
+  }

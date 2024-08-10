@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* titlenimage */
+.container-title {
+  width: 100vw;
+  height: 80vh;
+  background-image: url('./corniche.JPG'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem; 
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(27, 26, 26));
+  text-align: center;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* abt us */
+.aboutus {
+  background-color: #303c6a;
+  width: 100vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  color: #fdedb1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.aboutus ul {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8vw;
+}
+
+.aboutus li {
+  flex: 1;
+}
+
+.aboutus h1 {
+  margin: 0;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  font-size: 2rem; 
+}
+
+.aboutus p {
+  margin: 0;
+  padding-top: 1rem;
+  font-size: 1rem; 
+}
+
+.aboutus img {
+  width: 15vw; 
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+/*services*/
+.ourservices {
+  background-color: #ffffff;
+  padding: 10vh 0;
+  width: 100vw;
+}
+
+.ourservices h1 {
+  text-align: center;
+  padding-bottom: 5vh;
+  font-size: 2rem; 
+}
+
+.ourservices h4 {
+  padding-top: 3vh;
+}
+
+.icon {
+  padding-top: 3vh;
+}
+
+.ourservices ul {
+  list-style-type: none; 
+  padding-top: 5vh;
+  margin: 0;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5vw; 
+}
+
+
+.ourservices li {
+  
+  text-align: center;
+  width: 40vw; 
+  height: 45vh;
+  padding: 1rem; 
+  border-radius: 10px; 
+  border: 2px solid #fdedb1;
+  background-color: #303c6a; 
+  color: #fdedb1; 
+  
+}
+
+.ourservices li:hover{
+  background-color: rgb(134, 60, 7);
+}
+
+.ourservices a:hover {
+  transform: scale(1.02);
+}
+
+.ourservices a {
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 1024px) {
+  .container-title {
+    height: 60vh; 
+  }
+
+  .title {
+    font-size: 2.5rem; 
+  }
+
+  .aboutus ul {
+    flex-direction: column;
+    padding: 0 5vw;
+  }
+
+  .aboutus img {
+    width: 30vw;
+  }
+
+  .ourservices ul {
+    flex-direction: column;
+    gap: 4vw; 
+  }
+
+  .ourservices li {
+    width: 70vw;
+    height: auto; 
+  }
+}
+
+@media (max-width: 768px) {
+  .container-title {
+    height: 50vh; 
+  }
+
+  .aboutus ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutus h1 {
+    font-size: 1.75rem; 
+  }
+
+  .aboutus p {
+    font-size: 1rem; 
+  }
+
+  .ourservices h1 {
+    font-size: 1.75rem; 
+  }
+
+  .ourservices ul {
+    gap: 3vw; 
+  }
+
+  .ourservices li {
+    width: 80vw; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container-title {
+    height: 40vh; 
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .aboutus h1 {
+    font-size: 1.5rem;
+  }
+
+  .aboutus p {
+    font-size: 0.875rem; 
+  }
+
+  .ourservices h1 {
+    font-size: 1.5rem; 
+  }
+
+  .ourservices li {
+    width: 90vw; 
+    height: auto; 
+  }
+
+  .aboutus img {
+    width: 40vw; 
+  }
+}

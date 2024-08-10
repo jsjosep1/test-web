@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container-title-contact {
+  width: 100vw;
+  height: 50vh;
+  background-image: url('./contactus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-contact {
+  font-size: 55px;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(255, 255, 255));
+  text-align: center;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.info {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-info h4 {
+  margin-top: 10px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.contact-info p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-info a {
+  color: inherit;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px
+}
+
+.contact-info a:hover {
+  transform: scale(1.01);
+  text-decoration: none;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .title-contact {
+    font-size: 45px; /* Adjust font size */
+  }
+  
+  .info {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .contact-info {
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* Reduce gap between items */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .container-title-contact {
+    height: 40vh; /* Adjust height for smaller screens */
+  }
+
+  .title-contact {
+    font-size: 35px; /* Adjust font size */
+  }
+
+  .info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contact-info {
+    gap: 1rem; /* Further reduce gap between items */
+  }
+}
