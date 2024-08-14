@@ -50,7 +50,7 @@ export default function Services() {
             <div className='card'>
             
               <FontAwesomeIcon icon={faEarListen} size='4x'className='icon'/>
-              <h4>Business Development Advisory<a href='/services/businessadvisory'>(learn more)</a></h4>
+              <h4>Business Development Advisory <a href='/services/businessadvisory'>(learn more)</a></h4>
               <ul>
                 <li>New business venture planning, startups, investments opportunities</li>
                 <li>Market Feasibiity/ Markend & Trend Research</li>
