@@ -12,7 +12,7 @@ function Footer() {
         <li><Link to="https://www.linkedin.com/company/mwc-llc">LinkedIn</Link></li>
       </ul>
       <div className="rights">
-        <p>Copyright © 2020 All Rights Reserved By <a href="https://www.mwc-consultancy.com/">MWC Consultancy.</a></p>
+        <p>Copyright © 2020 All Rights Reserved By <a href="/">MWC Consultancy.</a></p>
 
       </div>
     </footer>

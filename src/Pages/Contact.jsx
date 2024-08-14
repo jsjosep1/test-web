@@ -32,14 +32,14 @@ export default function Contact() {
                 <li data-aos = "fade-right"> 
                     <FontAwesomeIcon icon={faEnvelope} size='4x' color='#0a66c2'/>
                     <h4>Email</h4>
-                    <a href = "mailto: juansj2004@gmail.com">juansj2004@gmail.com</a>
+                    <a href = "mailto: contact@mwc-consultancy.com">contact@mwc-consultancy.com</a>
                 
                 </li>
                 
                 <li data-aos = "fade-left"> 
                     <FontAwesomeIcon icon={faPhone} size='4x' color='#0a66c2'/>
                     <h4>Phone</h4>
-                    <a href='tel:+974-5026-9006'>+974 5026 9006</a>
+                    <a href='tel:+974-4423-1348'>+974-4423-1348</a>
 
                     
                 </li>
