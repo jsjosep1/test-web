@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+app.listen(3001, () => console.log("Server Running"));
 
 
 const contactEmail = nodemailer.createTransport({
@@ -26,24 +26,24 @@ const contactEmail = nodemailer.createTransport({
       console.log("Ready to Send");
     }
   });
-
+  
   router.post("/contact", (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const message = req.body.message; 
+    const { name, email, message } = req.body; 
     const mail = {
       from: name,
-      to: "***************@gmail.com",
+      to: "your-recipient-email@gmail.com", // Replace with your email
       subject: "Contact Form Submission",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
              <p>Message: ${message}</p>`,
     };
+  
     contactEmail.sendMail(mail, (error) => {
       if (error) {
-        res.json({ status: "ERROR" });
+        console.error("Error sending email:", error);
+        res.status(500).json({ status: "ERROR", error: error.message });
       } else {
-        res.json({ status: "Message Sent" });
+        res.status(200).json({ status: "Message Sent" });
       }
     });
   });
