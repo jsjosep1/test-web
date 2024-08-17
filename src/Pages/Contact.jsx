@@ -51,6 +51,8 @@ export default function Contact() {
                 </li>
             </ul>
         </div>
+
+        <Contact/>
         
     
         </>
