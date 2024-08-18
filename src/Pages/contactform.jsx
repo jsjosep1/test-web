@@ -3,25 +3,35 @@ import emailjs from '@emailjs/browser';
 import './contactform.css'
 
 export const ContactUs = () => {
-  const [showNotification, setShowNotification] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setIsSubmitted(false);
 
     emailjs
       .sendForm('service_vjr84ps', 'template_gmt2y7l', form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then(
         () => {
           console.log('SUCCESS!');
-          setShowNotification(true);
+          setIsSubmitting(false);
+          setIsSubmitted(true);
+
+          // Hide the confirmation message after 3 seconds
           setTimeout(() => {
-            setShowNotification(false);
+            setIsSubmitted(false);
           }, 3000);
+          
+          // Optionally reset form fields
+          form.current.reset();
         },
         (error) => {
           console.log('FAILED...', error.text);
-        },
+          setIsSubmitting(false);
+        }
       );
   };
 
@@ -35,9 +45,11 @@ export const ContactUs = () => {
         <input type="email" name="user_email" />
         <label>Message</label>
         <textarea name="message" />
-        <input type="submit" value="Send" />
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? <div className="spinner"></div> : 'Send'}
+        </button>
       </form>
-      {showNotification && <div className='notification'>Message sent successfully!</div>}
+      {isSubmitted && <p className='confirmation-message'>Thank you! Your message has been sent successfully.</p>}
     </div>
   );
 };
