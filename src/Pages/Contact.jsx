@@ -5,10 +5,7 @@ import './contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLocationDot, faPhone} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons' 
-import ContactForm from './contactform'
-
-
-
+import { ContactUs } from './contactform'
 
 export default function Contact() {
     useEffect(()=> {
@@ -53,7 +50,7 @@ export default function Contact() {
             </ul>
         </div>
 
-        <ContactForm/>
+        <ContactUs/>
         
     
         </>

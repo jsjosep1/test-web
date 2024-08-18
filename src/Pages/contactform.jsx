@@ -1,44 +1,45 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './contactform.css'
 
-const ContactForm = () => {
-  const [status, setStatus] = useState("Submit");
-  const handleSubmit = async (e) => {
+export const ContactUs = () => {
+  const [showNotification, setShowNotification] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    let response = await fetch("http://localhost:3001/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
+
+    emailjs
+      .sendForm('service_vjr84ps', 'template_gmt2y7l', form.current, {
+        publicKey: 'a_duhAoooOZdSBqr1',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setShowNotification(true);
+          setTimeout(() => {
+            setShowNotification(false);
+          }, 3000);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" required />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" required />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" required />
-      </div>
-      <button type="submit">{status}</button>
-    </form>
+    <div className='form-container'>
+      <h2>Feel free to contact us</h2>
+      <form className='form' ref={form} onSubmit={sendEmail}>
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Email</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+      </form>
+      {showNotification && <div className='notification'>Message sent successfully!</div>}
+    </div>
   );
 };
-
-export default ContactForm;
