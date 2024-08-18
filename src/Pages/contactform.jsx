@@ -10,9 +10,7 @@ export const ContactUs = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_vjr84ps', 'template_gmt2y7l', form.current, {
-        publicKey: 'a_duhAoooOZdSBqr1',
-      })
+      .sendForm('service_vjr84ps', 'template_gmt2y7l', form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then(
         () => {
           console.log('SUCCESS!');
