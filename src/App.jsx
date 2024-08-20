@@ -1,11 +1,11 @@
-import Navbar from './navbar';
-import AboutUs from './Pages/AboutUs';
+import Navbar from './navbar.jsx';
+import AboutUs from './Pages/AboutUs.jsx';
 import { Route, Routes } from 'react-router-dom';
-import Contact from './Pages/Contact';
-import Services from './Pages/Services';
+import Contact from './Pages/Contact.jsx';
+import Services from './Pages/Services.jsx';
 import Footer from './footer.jsx'
 
-import Home from './Pages/Home';
+import Home from './Pages/Home.jsx';
 import Strategic from './Pages/services/smc.jsx';
 import ProjectManagement from './Pages/services/pma.jsx';
 import BusinessDev from './Pages/services/bda.jsx';

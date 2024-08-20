@@ -1,3 +1,4 @@
+/* General styles */
 * {
   box-sizing: border-box;
 }
@@ -5,9 +6,7 @@
 body {
   margin: 0;
   font-family: Avenir;
-
 }
-
 
 .Nav {
   width: 100vw;
@@ -20,11 +19,9 @@ body {
   position: relative;
 }
 
-
 .Site-Logo {
   margin: 0;
 }
-
 
 .Nav-links {
   display: flex;
@@ -44,14 +41,12 @@ body {
   padding: 0.25rem;
 }
 
-
-
 .Nav-links li.active {
   color: orange;
 }
 
 .Nav-links li:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   color: orange;
 }
 
@@ -67,6 +62,7 @@ body {
   font-size: 1.5rem;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .Nav {
     padding: 20px 10px; 
@@ -78,7 +74,9 @@ body {
     flex-direction: column; 
     gap: 1rem;
     width: 100%; 
+    align-items: center;
     text-align: center;
+    justify-content: center;
     background-color: white; 
     max-height: 0; 
     overflow: hidden;
@@ -95,7 +93,6 @@ body {
   }
 }
 
-
 .container {
   width: 100vw;
   min-height: 100%;
@@ -103,14 +100,17 @@ body {
   padding-right: 0;
   margin-right: 0;
   margin-left: 0;
+  position: relative;
+  z-index: 1;
+  overflow: visible; /* Ensure it doesn't hide the dropdown */
 }
 
 .footer {
   width: 100vw;
   color: white;
   background-color: #303c6a;
-  position:relative;
-  bottom:0;
+  position: relative;
+  bottom: 0;
   padding: 1rem;
   text-align: center;
 }
@@ -136,3 +136,41 @@ body {
 .rights a {
   color: beige;
 }
+
+/* Dropdown specific styles */
+.Nav-links .dropdown {
+  position: relative; /* Ensure the dropdown menu is positioned relative to this element */
+  z-index: 100; /* This helps in ensuring it's above other nav items */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  z-index: 10000; /* Ensure it is above other elements */
+}
+
+
+.dropdown-menu li:hover {
+  transform: none;
+  text-decoration: underline;
+}
+
+.dropdown-menu li a {
+  text-align: center;
+  font-size:small;
+  font-weight: 300;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 10000; /* Ensure the dropdown menu stays on top */
+}
+

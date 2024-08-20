@@ -1,6 +1,8 @@
 import { useState } from "react";
 import logo from "./mwc-logo-trans.png"
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +21,17 @@ export default function Navbar(){
         <ul className={`Nav-links ${isOpen ? 'active' : ''}`}>
           <CustomLink to="/" className="home">Home</CustomLink>
           <CustomLink to="/aboutus" className="abtus">About Us</CustomLink>
-          <CustomLink to="/services" className="servies">Services</CustomLink>
+          <li className="Nav-item dropdown">
+            <CustomLink to="/services" className="services">Services<FontAwesomeIcon icon={faAngleDown} style={{marginLeft : '0.5rem'}} /></CustomLink>
+              <ul className="dropdown-menu">
+                <li><CustomLink to="/services/strategicmanagementconsultancy">Strategic Management Consultancy</CustomLink></li>
+                <li><CustomLink to="/services/projectmanagement">Project Management</CustomLink></li>
+                <li><CustomLink to="/services/businesstraining">Business & Professional Training</CustomLink></li>
+                <li><CustomLink to="/services/businessadvisory">Business Development Advisory</CustomLink></li>
+                <li><CustomLink to="/services/ess">Environment Sustainability Solutions</CustomLink></li>
+                <li><CustomLink to="/services/esg">ESG and Sustainability Solutions</CustomLink></li>
+              </ul>
+          </li>
           <CustomLink to="/contact" className="contact">Contact Us</CustomLink>
         </ul>
       </nav>
