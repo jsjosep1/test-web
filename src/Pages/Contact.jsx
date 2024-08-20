@@ -14,7 +14,7 @@ export default function Contact() {
     },[])
     return (
         <>
-        <div className="container-title-contact" data-aos = "fade-up">
+        <div className="container-title-contact">
             <div className = "title-contact" data-aos = "fade-right"> Contact us </div>
         </div>
 

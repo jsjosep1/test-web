@@ -36,7 +36,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className='form-container'>
+    <div className='form-container' data-aos = "fade-up">
       <h2>Feel free to contact us</h2>
       <form className='form' ref={form} onSubmit={sendEmail}>
         <label>Name</label>

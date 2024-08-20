@@ -15,7 +15,7 @@ export default function AboutUs() {
     },[])
     return (
         <>
-        <div className="container-title-about" data-aos = "fade-up">
+        <div className="container-title-about" >
             <div className = "title-about" data-aos = "fade-right">About us </div>
         </div>
 

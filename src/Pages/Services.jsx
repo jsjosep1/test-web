@@ -54,7 +54,7 @@ export default function Services() {
 
     return (
         <>
-            <div className="container-title-services" data-aos="fade-up">
+            <div className="container-title-services">
                 <div className="title-services" data-aos="fade-right">Services</div>
             </div>
 
