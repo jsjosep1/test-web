@@ -8,7 +8,8 @@ import { faChartSimple, faDatabase, faEarListen, faEarthAmericas, faPeopleRoof, 
 
 export default function Services() {
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 2000, once: true});
+        
     }, []);
 
     var settings = {

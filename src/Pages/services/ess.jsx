@@ -8,7 +8,7 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 
 export default function ESS() {
     useEffect(()=> {
-        Aos.init({duration:2000})
+        Aos.init({duration:2000,once:true})
     },[])
     return (
         <>

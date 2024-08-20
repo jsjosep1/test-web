@@ -11,7 +11,8 @@ import { faSquareCheck } from '@fortawesome/free-solid-svg-icons'
 
 export default function AboutUs() {
     useEffect(()=> {
-        Aos.init({duration:2000})
+        Aos.init({duration:2000,once:true})
+
     },[])
     return (
         <>

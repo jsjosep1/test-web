@@ -10,7 +10,8 @@ import { CallbackForm } from './callbackform'
 
 export default function Contact() {
     useEffect(()=> {
-        Aos.init({duration:2000})
+        Aos.init({duration:2000, once:true})
+
     },[])
     return (
         <>
