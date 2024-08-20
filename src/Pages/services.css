@@ -19,14 +19,61 @@
 }
 
 .title-services {
-  font-size: 5vw; /* Responsive font size */
-  text-align: center;
+  font-size: 5vw;
   font-weight: 700;
   color: black;
 }
 
+.industry-focus {
+  width: 100vw;
+  background-color: #303c6a;
+  text-align: center;
+  color: beige;
+  display: flex;
+  flex-direction: column;
+}
+
+.industry-focus h1 {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+
+.focus3  ul{
+  list-style-type: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding-bottom: 5vh;
+
+}
+
+.focus3 li {
+  width: 20rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #82411c50;
+  border: 2px solid beige;
+  border-radius: 20px;
+}
+
+.focus3 h4 {
+  margin: 2px;
+}
+
+.sent {
+  padding-bottom: 3vh;
+}
+
 .slider-container {
-  background-color: beige;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
   width: 100vw;
   height: 70vh;
@@ -39,54 +86,55 @@
 }
 
 .slider {
-  background-color: beige;
-  padding: 5vh 0vw 10vh 0vw; /* Adjust padding for better responsiveness */
+  background-color: rgb(255, 255, 255);
+  padding: 5vh 0;
   width: 100%;
-  display: inline-block;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .card {
   height: 40vh;
-  padding: 10px; /* Adjust padding if needed */
-  display: inline-block;
-  border-radius: 20px;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 50px;
   border: 2px solid black;
   background-color: #303c6a;
   color: beige;
   text-align: center;
+  margin: 0 1vw;
+  transition: transform 0.3s ease;
 }
 
-.card a{
+.card a {
   text-decoration: underline;
   color: rgb(235, 126, 2);
   font-size: small;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.05);
 }
-.card ul{
-  list-style-position: inside; /* Positions bullets inside the list item's box */
-  text-align: center; /* Center-aligns the text and bullets */
-  padding: 0; /* Removes default padding */
+
+.card ul {
+  list-style-position: inside;
+  text-align: center;
+  padding: 0;
   margin: 0;
 }
 
 .card h4 {
-  padding-top: 1rem; /* Adjust padding for better text spacing */
-}
-
-.card:hover {
-  transform: scale(1.02); /* Slightly increased hover effect for better feedback */
+  padding-top: 1rem;
 }
 
 .slick-slide > div {
-  margin: 0 1vw; /* Adjust margin for better responsiveness */
+  margin: 0 1vw;
 }
-
-
-
 
 @media (max-width: 1200px) {
   .title-services {
@@ -94,37 +142,22 @@
   }
 
   .slider-container {
-    height: 40vh;
+    height: 70vh;
   }
-
-  .slider {
-    padding: 4vw 4vw 8vh 4vw;
-  }
-
-  .card {
-    height: 25vh;
-  
-  }
-
 
 }
 
 @media (max-width: 768px) {
   .title-services {
-    font-size: 6vw; /* Increase font size on smaller screens for better readability */
+    font-size: 6vw;
   }
 
   .slider-container {
-    height: 30vh;
+    height: 70vh;
   }
 
-  .slider {
-    padding: 3vw 3vw 6vh 3vw;
-  }
-
-  .card {
-    height: 20vh;
-    margin: 0 1vw;
+  .slider li {
+    display: none;
   }
 
   
@@ -132,34 +165,19 @@
 
 @media (max-width: 480px) {
   .title-services {
-    font-size: 7vw; /* Increase font size on extra small screens */
+    font-size: 7vw;
   }
 
   .slider-container {
-    height: 40vh;
+    height: 70vh;
   }
 
-  .card li {
+  .slider li {
     display: none;
-  }
-
-  .slider {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    font-size: 10px;
-    text-align: center;
-  }
-
-  .card {
-    height: 21vh;
   }
 
 
 }
 
-
-
-  
-  
   
   

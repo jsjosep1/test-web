@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './contactform.css'
 
-export const CallbackForm = () => {
+export const ContactUs = () => {
   const [showNotification, setShowNotification] = useState(false);
   const form = useRef();
 
@@ -10,7 +10,7 @@ export const CallbackForm = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_vjr84ps', 'template_u1wlg5c', form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+      .sendForm('service_vjr84ps', 'template_gmt2y7l', form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then(
         () => {
           console.log('SUCCESS!');
@@ -33,7 +33,7 @@ export const CallbackForm = () => {
         <input type="text" name="user_name" />
         <label>Number</label>
         <input type="phone" name="user_phone" />
-        <input type="submit" value="Request Callback" />
+        <input type="submit" value="Send" />
       </form>
       {showNotification && <div className='notification'>Callback Requested!</div>}
     </div>

@@ -10,6 +10,7 @@ body {
 
 
 .Nav {
+  width: 100vw;
   background-color: white;
   color: black;
   display: flex;
@@ -96,7 +97,7 @@ body {
 
 
 .container {
-  
+  width: 100vw;
   min-height: 100%;
   padding-left: 0;
   padding-right: 0;

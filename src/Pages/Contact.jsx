@@ -18,6 +18,8 @@ export default function Contact() {
             <div className = "title-contact" data-aos = "fade-right"> Contact us </div>
         </div>
 
+
+
         <div className='info'>
             <ul className='contact-info'>
                 <li data-aos = "fade-right"> 
