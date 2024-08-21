@@ -1,3 +1,5 @@
+/* Adjustments for the overall design and slider */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +13,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,10 +41,9 @@
 
 .focus3 ul {
   list-style-type: none;
-  text-align: center;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   flex-direction: row;
   gap: 3rem;
   padding-bottom: 5vh;
@@ -54,12 +54,12 @@
   height: 15rem;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
   background-color: #82411c50;
   border: 2px solid beige;
   border-radius: 20px;
+  text-align: center;
 }
 
 .focus3 h4 {
@@ -71,7 +71,7 @@
 }
 
 .slider-container {
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   overflow: hidden;
   width: 100vw;
   height: 70vh;
@@ -84,7 +84,6 @@
 }
 
 .slider {
-  background-color: rgb(255, 255, 255);
   padding: 5vh 0;
   width: 100%;
   display: flex;
@@ -133,7 +132,7 @@
   margin: 0 1vw;
 }
 
-
+/* Desktop adjustments */
 @media (min-width: 1200px) {
   .title-services {
     font-size: 4vw;
@@ -154,7 +153,42 @@
   }
 }
 
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title-services {
+    font-size: 4.5vw;
+  }
 
+  .industry-focus {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .focus3 ul {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .focus3 li {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .slider-container {
+    height: 65vh;
+    padding: 0 2rem;
+  }
+
+  .card {
+    width: 180px;
+    height: 35vh;
+    margin: 0 2vw;
+  }
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .title-services {
     font-size: 6vw;
@@ -207,40 +241,3 @@
     padding: 1rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .title-services {
-    font-size: 4.5vw; /* Adjust font size for better readability */
-  }
-
-  .industry-focus {
-    flex-direction: column; /* Stack elements vertically */
-    padding: 0 2rem; /* Add some padding on the sides */
-  }
-
-  .focus3 ul {
-    flex-direction: column; /* Stack list items vertically */
-    gap: 2rem; /* Increase gap between list items */
-    padding: 0 1rem; /* Add padding */
-  }
-
-  .focus3 li {
-    width: 80%; /* Adjust width for better fit on tablet screens */
-    height: auto; /* Allow flexible height */
-    margin-bottom: 2rem; /* Add margin for spacing */
-  }
-
-  .slider-container {
-    height: 65vh; /* Adjust height for better fit on tablets */
-    padding: 0 2rem; /* Add padding */
-  }
-
-  .card {
-    width: 180px; /* Adjust width of cards */
-    height: 35vh; /* Adjust height of cards */
-    margin: 0 2vw; /* Adjust margin for spacing between cards */
-  }
-}
-
-
-  
-  
