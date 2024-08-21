@@ -46,7 +46,7 @@
   align-items: center;
   flex-direction: row;
   gap: 3rem;
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
 }
 
 .focus3 li {
@@ -244,7 +244,7 @@
   }
 
   .focus3 li {
-    width: 100%;
-    padding: 1rem;
+    width: 90vw;
+    min-height: 25vh;
   }
 }
