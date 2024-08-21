@@ -31,7 +31,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: relative; /* Ensure the dropdown menu positions relative to this */
+  position: relative; 
 }
 
 /* Style for the links in the navbar */
@@ -43,7 +43,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0.25rem;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 .Nav-links li.active {
@@ -52,7 +52,7 @@ body {
 
 .Nav-links li:hover {
   color: orange;
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05); 
 }
 
 .Nav-toggle {
@@ -67,9 +67,9 @@ body {
   font-size: 1.5rem;
 }
 
-/* Dropdown specific styles */
+
 .dropdown {
-  position: relative; /* Position relative to its parent */
+  position: relative; 
 }
 
 .dropdown-menu {
@@ -79,12 +79,12 @@ body {
   background-color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   list-style: none;
-  width: 200px; /* Adjust width as needed */
-  opacity: 0; /* Start hidden */
-  visibility: hidden; /* Start hidden */
-  max-height: 0; /* Start hidden */
-  overflow: hidden; /* Hide overflow */
-  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease; /* Smooth transitions */
+  width: 200px; 
+  opacity: 0; 
+  visibility: hidden; 
+  max-height: 0;
+  overflow: hidden; 
+  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease; 
 }
 
 .dropdown-menu li {
@@ -97,15 +97,15 @@ body {
   font-weight: 300;
   color: black;
   text-decoration: none;
-  display: block; /* Make each link a block for better click area */
+  display: block; 
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  max-height: 500px; /* Adjust as needed */
-  display: block; /* Ensure it's displayed */
+  max-height: 500px; 
+  display: block; 
 }
 
 /* Responsive adjustments */
@@ -125,11 +125,11 @@ body {
     background-color: white;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease; /* Smooth transition */
+    transition: max-height 0.3s ease; 
   }
 
   .Nav-links.active {
-    max-height: 500px; /* Adjust as needed */
+    max-height: 500px; 
     overflow: auto;
   }
 
@@ -138,26 +138,26 @@ body {
   }
 
   .dropdown-menu {
-    position: static; /* Make dropdown position static for mobile */
+    position: static; 
     flex-direction: column;
-    width: 100%; /* Full width of the parent container */
-    box-shadow: none; /* Remove shadow for mobile view */
-    opacity: 1; /* Always visible on mobile */
-    visibility: visible; /* Ensure visibility */
-    max-height: none; /* Allow natural height */
-    transition: max-height 0.3s ease; /* Smooth height transition */
+    width: 100%; 
+    box-shadow: none; 
+    opacity: 1; 
+    visibility: visible; 
+    max-height: none; 
+    transition: max-height 0.3s ease; 
   }
 
   .dropdown:hover .dropdown-menu {
-    display: flex; /* Show the menu on hover */
+    display: flex; 
     text-align: center;
-    opacity: 1; /* Ensure visibility */
-    visibility: visible; /* Ensure visibility */
+    opacity: 1; 
+    visibility: visible; 
   }
 
   .dropdown-menu li a {
-    padding: 10px 0; /* Add some padding for better touch targets */
-    width: 100%; /* Ensure full width clickable area */
+    padding: 10px 0; 
+    width: 100%; 
   }
 }
 
@@ -170,7 +170,7 @@ body {
   margin-left: 0;
   position: relative;
   z-index: 1;
-  overflow: visible; /* Ensure it doesn't hide the dropdown */
+  overflow: visible;
 }
 
 .footer {
