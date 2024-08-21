@@ -38,8 +38,7 @@
   padding-bottom: 5vh;
 }
 
-
-.focus3  ul{
+.focus3 ul {
   list-style-type: none;
   text-align: center;
   justify-content: center;
@@ -48,7 +47,6 @@
   flex-direction: row;
   gap: 3rem;
   padding-bottom: 5vh;
-
 }
 
 .focus3 li {
@@ -92,7 +90,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .card {
@@ -136,7 +133,8 @@
   margin: 0 1vw;
 }
 
-@media (max-width: 1200px) {
+
+@media (min-width: 1200px) {
   .title-services {
     font-size: 4vw;
   }
@@ -145,22 +143,49 @@
     height: 70vh;
   }
 
+  .focus3 li {
+    width: 25rem;
+    height: 20rem;
+  }
+
+  .card {
+    height: 45vh;
+    width: 250px;
+  }
 }
+
 
 @media (max-width: 768px) {
   .title-services {
     font-size: 6vw;
   }
 
+  .industry-focus {
+    flex-direction: column;
+  }
+
+  .focus3 ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .focus3 li {
+    width: 90%;
+    height: auto;
+  }
+
   .slider-container {
-    height: 70vh;
+    height: 60vh;
+  }
+
+  .card {
+    width: 150px;
+    height: 30vh;
   }
 
   .slider li {
     display: none;
   }
-
-  
 }
 
 @media (max-width: 480px) {
@@ -169,15 +194,53 @@
   }
 
   .slider-container {
-    height: 70vh;
+    height: 50vh;
   }
 
-  .slider li {
-    display: none;
+  .card {
+    width: 120px;
+    height: 25vh;
   }
 
-
+  .focus3 li {
+    width: 100%;
+    padding: 1rem;
+  }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title-services {
+    font-size: 4.5vw; /* Adjust font size for better readability */
+  }
+
+  .industry-focus {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 0 2rem; /* Add some padding on the sides */
+  }
+
+  .focus3 ul {
+    flex-direction: column; /* Stack list items vertically */
+    gap: 2rem; /* Increase gap between list items */
+    padding: 0 1rem; /* Add padding */
+  }
+
+  .focus3 li {
+    width: 80%; /* Adjust width for better fit on tablet screens */
+    height: auto; /* Allow flexible height */
+    margin-bottom: 2rem; /* Add margin for spacing */
+  }
+
+  .slider-container {
+    height: 65vh; /* Adjust height for better fit on tablets */
+    padding: 0 2rem; /* Add padding */
+  }
+
+  .card {
+    width: 180px; /* Adjust width of cards */
+    height: 35vh; /* Adjust height of cards */
+    margin: 0 2vw; /* Adjust margin for spacing between cards */
+  }
+}
+
 
   
   
