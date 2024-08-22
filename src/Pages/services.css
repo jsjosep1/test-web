@@ -144,58 +144,23 @@
     height: 20rem;
   }
 
-  .card {
+  .swiper-slide {
     height: 45vh;
     width: 250px;
   }
+
 }
 
 /* Tablet adjustments */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 768px) and (min-width : 481px) {
+  
   .title-services {
-    font-size: 4.5vw;
-  }
-
-  .industry-focus {
-    flex-direction: column;
-    padding: 0 2rem;
-  }
-
-  .focus3 ul {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-
-  .focus3 li {
-    width: 80%;
-    height: auto;
-    margin-bottom: 2rem;
+    font-size: 7vw;
   }
 
   .slider-container {
-    height: 60vh;
-  }
-
-  .swiper-slide{
-    width: 350px !important;
-    height: 35vh !important;
-  }
-
-  .swiper-slide li {
-    display: none;
-    
-  }
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .title-services {
-    font-size: 6vw;
-  }
-
-  .industry-focus {
-    flex-direction: column;
+    height: 50vh;
+    width: 100vw;
   }
 
   .focus3 ul {
@@ -208,19 +173,21 @@
     height: auto;
   }
 
-  .slider-container {
-    height: 60vh;
+  .swiper-slide {
+    width: 300px !important;
+    height: 30vh !important;
   }
 
-  .card {
-    width: 150px;
-    height: 30vh;
-  }
-
-  .slider li {
+  .swiper-slide li {
     display: none;
   }
+
+  .focus3 li {
+    width: 90vw;
+    min-height: 25vh;
+  }
 }
+
 
 @media (max-width: 480px) {
   .title-services {
@@ -230,6 +197,16 @@
   .slider-container {
     height: 50vh;
     width: 100vw;
+  }
+
+  .focus3 ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .focus3 li {
+    width: 90%;
+    height: auto;
   }
 
   .swiper-slide {
