@@ -1,5 +1,3 @@
-/* Adjustments for the overall design and slider */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -75,8 +73,8 @@
   overflow: hidden;
   width: 100vw;
   height: 70vh;
-  justify-content: center; /* Center Swiper horizontally */
-  align-items: center; /* Center Swiper vertically */
+  justify-content: center; 
+  align-items: center; 
   position: relative;
   text-align: center;
 }
@@ -102,8 +100,8 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
-    color: #ffffff !important; /* Or any other color */
-    z-index: 10; /* Ensure they are on top of other elements */
+    color: #ffffff !important; 
+    z-index: 10; 
 }
 
 .card a {

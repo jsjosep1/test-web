@@ -19,6 +19,7 @@ body {
   align-items: center;
   padding: 20px 150px;
   position: relative;
+  z-index: 100;
 }
 
 .Site-Logo {
@@ -29,21 +30,15 @@ body {
   display: flex;
   gap: 4rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative; 
 }
 
-/* Style for the links in the navbar */
 .Nav-links a {
   color: inherit;
   font-size: large;
   font-weight: 600;
   text-decoration: none;
-  display: flex;
-  align-items: center;
   padding: 0.25rem;
-  transition: color 0.3s ease, transform 0.3s ease; 
+  transition: color 0.3s ease;
 }
 
 .Nav-links li.active {
@@ -52,7 +47,6 @@ body {
 
 .Nav-links li:hover {
   color: orange;
-  transform: scale(1.05); 
 }
 
 .Nav-toggle {
@@ -67,9 +61,9 @@ body {
   font-size: 1.5rem;
 }
 
-
 .dropdown {
-  position: relative; 
+  position: relative;
+  width: fit-content;
 }
 
 .dropdown-menu {
@@ -79,12 +73,13 @@ body {
   background-color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   list-style: none;
-  width: 200px; 
-  opacity: 0; 
-  visibility: hidden; 
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
   max-height: 0;
-  overflow: hidden; 
-  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease; 
+  overflow: hidden;
+  z-index: 200;
+  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
 }
 
 .dropdown-menu li {
@@ -97,80 +92,73 @@ body {
   font-weight: 300;
   color: black;
   text-decoration: none;
-  display: block; 
+  display: block;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
+  
+  display: block;
+  overflow: auto;
   opacity: 1;
   visibility: visible;
-  max-height: 500px; 
-  display: block; 
+  max-height: 500px;
 }
 
-/* Responsive adjustments */
+/* Responsive styles */
 @media (max-width: 768px) {
   .Nav {
-    padding: 20px 10px;
-    flex-direction: column;
+    padding: 20px;
   }
 
   .Nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.725);
+    padding: 1rem;
     align-items: center;
-    text-align: center;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease; 
   }
 
+
   .Nav-links.active {
-    max-height: 500px; 
-    overflow: auto;
+    display: flex;
+  }
+  .Nav-links li:hover {
+    color: black;
   }
 
   .Nav-toggle {
     display: block;
   }
 
+  .dropdown {
+    width: fit-content;
+  }
+
   .dropdown-menu {
-    position: static; 
-    flex-direction: column;
-    width: 100%; 
-    box-shadow: none; 
-    opacity: 1; 
-    visibility: visible; 
-    max-height: none; 
-    transition: max-height 0.3s ease; 
+    width: 70vw;
+    position: static;
+    max-height: none;
+    visibility: visible;
+    opacity: 1;
   }
 
   .dropdown:hover .dropdown-menu {
-    display: flex; 
-    text-align: center;
-    opacity: 1; 
-    visibility: visible; 
-  }
-
-  .dropdown-menu li a {
-    padding: 10px 0; 
-    width: 100%; 
+    max-height: 500px;
   }
 }
 
 .container {
   width: 100vw;
   min-height: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
   position: relative;
   z-index: 1;
-  overflow: visible;
 }
 
 .footer {
@@ -204,5 +192,8 @@ body {
 .rights a {
   color: beige;
 }
+
+
+
 
 

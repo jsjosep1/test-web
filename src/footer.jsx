@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CallbackForm } from "./Pages/callbackform";
 
 function Footer() {
   return (

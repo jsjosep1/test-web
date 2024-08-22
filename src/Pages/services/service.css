@@ -86,23 +86,23 @@
 @media (max-width: 767px) {
   .title-service {
     font-size: 35px;
-    color: white; /* Smaller title size */
+    color: white;
   }
 
   .service-desc {
-    flex-direction: column; /* Stack image and text vertically */
+    flex-direction: column;
   }
 
   .service-desc img {
-    width: 100%; /* Image takes full width */
+    width: 100%; 
   }
 
   .text-content {
-    padding: 20px 10px; /* Reduce padding */
+    padding: 20px 10px; 
   }
 
   .services-offered ul {
-    display: block; /* Display block for list items */
+    display: block; 
   }
 
   .services-offered li {
@@ -113,20 +113,20 @@
 
 @media (min-width: 1024px) {
   .container-title-service {
-    height: 60vh; /* Increase height */
+    height: 60vh; 
   }
 
   .title-service {
-    font-size: 65px; /* Larger title size */
+    font-size: 65px; 
   }
 
   .service-desc img {
-    width: 40vw; /* Smaller image width */
+    width: 40vw; 
   }
 
   .text-content {
     padding-left: 50px;
-    padding-right: 40px; /* Increase padding */
+    padding-right: 40px; 
   }
 
   .services-offered ul {
@@ -134,7 +134,7 @@
   }
 
   .services-offered li {
-    padding-left: 100px; /* Increase padding for list items */
+    padding-left: 100px; 
     padding-right: 100px;
   }
 }

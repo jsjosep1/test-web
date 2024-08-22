@@ -71,6 +71,7 @@ export default function Services() {
                     spaceBetween={30}
                     slidesPerView={3}
                     loop={true}
+                    speed={1000}
                     navigation={true}
                     modules={[Navigation]}
                     breakpoints={{
