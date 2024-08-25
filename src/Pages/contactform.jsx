@@ -53,14 +53,7 @@ export const ContactUs = () => {
 
     setIsSubmitting(true);
 
-    const formData = new FormData(form.current);
-    if (formValues.callback) {
-      formData.set('callback', 'Yes');
-    } else {
-      formData.set('callback','No')
-    }
-
-    emailjs.sendForm('service_vjr84ps', 'template_gmt2y7l', form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, form.current, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then(() => {
         setIsSubmitted(true);
         setIsSubmitting(false);
